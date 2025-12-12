@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background: #fafafa;
+    color: #333;
+}
+
+header {
+    background-color: antiquewhite;
+    padding: 20px;
+    text-transform: capitalize;
+    text-align: center;
+    text-decoration: underline;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.grid-home {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: 
+       "introduction photo1"
+       "introduction photo2"
+       "fun-fact  photo2";
+    gap: 20px;
+    padding: 20px;
+}
+
+.introduction {
+    grid-area: introduction;
+    background: #ffeef8;
+    padding: 15px;
+    border-radius: 10px;
+
+}
+
+.photo1 {
+    grid-area: photo1;
+    width: 200px
+}
+
+.photo2 {
+    grid-area: photo2;
+}
+
+.fun-fact {
+    grid-area: fact;
+    background: #fff2d9;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+    .grid-home {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "introduction"
+        "photo1"
+        "photo2"
+        "fun-fact";
+    }
+}
